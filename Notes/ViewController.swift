@@ -10,9 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    var content: String?
+    
+    @IBOutlet weak var NoteContentTextView: UITextView!
+    static var CurrNote: Note? = nil;
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+            NoteContentTextView.text = content
+            
+        
     }
 
     override func didReceiveMemoryWarning() {
